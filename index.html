@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="/TicTacToeFavicon.webp" type="image/x-icon">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h2>Tic Tac Toe</h2>
+        <div id="Box">
+            <div id="Head">
+                <div id="xHeader" class="hideBottomBorder">
+                    <svg class="headerSVG" role="img" viewBox="0 0 128 128"><path d="M16,16L112,112"></path><path d="M112,16L16,112"></path></svg>
+                    <p id="xScore"></p>
+                </div>
+                <div id="oHeader" class="hideBottomBorder">
+                    <svg class="headerSVG" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                    <p id="oScore"></p>
+                </div>
+            </div>
+            <p class="turnPara"><span class="dimLight">Start game - </span>X<span class="dimLight"> Turn</span></p>
+            <p class="turnPara">X<span class="dimLight"> Turn</span></p>
+            <p class="turnPara">O<span class="dimLight"> Turn</span></p>
+            <p class="turnPara dimLight">Game over</p>
+            <div id="midDiv">
+                <div id="innerMyDiv">
+                    <div class="gameGrid">
+                        <div id="GridLine1" class="gridLines beforeWidth"></div>
+                        <div id="GridLine2" class="gridLines beforeWidth"></div>
+                        <div id="GridLine3" class="gridLines beforeHeight"></div>
+                        <div id="GridLine4" class="gridLines beforeHeight"></div>
+                        <svg class="posAbs">
+                            <line x1="0" y1="36" x2="216" y2="36" class="winLines1"/>
+                        </svg>
+                        <svg class="posAbs">
+                            <line x1="0" y1="108" x2="216" y2="108" class="winLines1"/>
+                        </svg>
+                        <svg class="posAbs">
+                            <line x1="0" y1="180" x2="216" y2="180" class="winLines1"/>
+                        </svg>
+                        <svg class="posAbs">
+                            <line x1="36" y1="0" x2="36" y2="216" class="winLines1"/>
+                        </svg>
+                        <svg class="posAbs">
+                            <line x1="108" y1="0" x2="108" y2="216" class="winLines1"/>
+                        </svg>
+                        <svg class="posAbs">
+                            <line x1="180" y1="0" x2="180" y2="216" class="winLines1"/>
+                        </svg>
+                        <svg class="posAbs">
+                            <line x1="0" y1="0" x2="216" y2="216" class="winLines2"/>
+                        </svg>
+                        <svg class="posAbs">
+                            <line x1="216" y1="0" x2="0" y2="216" class="winLines2"/>
+                        </svg>
+                        <div class="gameCell" data-id="0">
+                            <svg viewBox="0 0 100 100" class="cross">
+                                <line x1="20" y1="20" x2="80" y2="80" class="crossLines crossLine1"/>
+                                <line x1="80" y1="20" x2="20" y2="80" class="crossLines crossLine2"/>
+                            </svg>
+                            <svg class="golla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                        <div class="gameCell" data-id="1">
+                            <svg viewBox="0 0 100 100" class="cross">
+                                <line x1="20" y1="20" x2="80" y2="80" class="crossLines crossLine1"/>
+                                <line x1="80" y1="20" x2="20" y2="80" class="crossLines crossLine2"/>
+                            </svg>
+                            <svg class="golla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                        <div class="gameCell" data-id="2">
+                            <svg viewBox="0 0 100 100" class="cross">
+                                <line x1="20" y1="20" x2="80" y2="80" class="crossLines crossLine1"/>
+                                <line x1="80" y1="20" x2="20" y2="80" class="crossLines crossLine2"/>
+                            </svg>
+                            <svg class="golla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                        <div class="gameCell" data-id="3">
+                            <svg viewBox="0 0 100 100" class="cross">
+                                <line x1="20" y1="20" x2="80" y2="80" class="crossLines crossLine1"/>
+                                <line x1="80" y1="20" x2="20" y2="80" class="crossLines crossLine2"/>
+                            </svg>
+                            <svg class="golla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                        <div class="gameCell" data-id="4">
+                            <svg viewBox="0 0 100 100" class="cross">
+                                <line x1="20" y1="20" x2="80" y2="80" class="crossLines crossLine1"/>
+                                <line x1="80" y1="20" x2="20" y2="80" class="crossLines crossLine2"/>
+                            </svg>
+                            <svg class="golla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                        <div class="gameCell" data-id="5">
+                            <svg viewBox="0 0 100 100" class="cross">
+                                <line x1="20" y1="20" x2="80" y2="80" class="crossLines crossLine1"/>
+                                <line x1="80" y1="20" x2="20" y2="80" class="crossLines crossLine2"/>
+                            </svg>
+                            <svg class="golla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                        <div class="gameCell" data-id="6">
+                            <svg viewBox="0 0 100 100" class="cross">
+                                <line x1="20" y1="20" x2="80" y2="80" class="crossLines crossLine1"/>
+                                <line x1="80" y1="20" x2="20" y2="80" class="crossLines crossLine2"/>
+                            </svg>
+                            <svg class="golla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                        <div class="gameCell" data-id="7">
+                            <svg viewBox="0 0 100 100" class="cross">
+                                <line x1="20" y1="20" x2="80" y2="80" class="crossLines crossLine1"/>
+                                <line x1="80" y1="20" x2="20" y2="80" class="crossLines crossLine2"/>
+                            </svg>
+                            <svg class="golla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                        <div class="gameCell" data-id="8">
+                            <svg viewBox="0 0 100 100" class="cross">
+                                <line x1="20" y1="20" x2="80" y2="80" class="crossLines crossLine1"/>
+                                <line x1="80" y1="20" x2="20" y2="80" class="crossLines crossLine2"/>
+                            </svg>
+                            <svg class="golla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                    </div>
+                    <div class="gameEndBoxes">
+                        <div class="gameEndUpper">
+                            <svg viewBox="0 0 100 100" class="endCross">
+                                <line x1="0" y1="0" x2="100" y2="100" class="endCrossLines"/>
+                                <line x1="100" y1="0" x2="0" y2="100" class="endCrossLines"/>
+                            </svg>
+                        </div>
+                        <p class="gameEndLower">WINNER!</p>
+                    </div>
+                    <div class="gameEndBoxes">
+                        <div class="gameEndUpper">
+                            <svg class="endGolla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                        <p class="gameEndLower">WINNER!</p>
+                    </div>
+                    <div class="gameEndBoxes">
+                        <div class="gameEndUpper">
+                            <svg viewBox="0 0 100 100" class="endCross">
+                                <line x1="0" y1="0" x2="100" y2="100" class="endCrossLines"/>
+                                <line x1="100" y1="0" x2="0" y2="100" class="endCrossLines"/>
+                            </svg>
+                            <svg class="endGolla" role="img" viewBox="0 0 128 128"><path d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path></svg>
+                        </div>
+                        <p class="gameEndLower">DRAW!</p>
+                    </div>
+                </div>
+            </div>
+            <button id="restartBtn" type="button">Restart game</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
